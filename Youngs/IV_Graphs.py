@@ -7,7 +7,7 @@ import os
 
 # Import data
 # Default file path for the sample file included in the repository
-file_path = 'youngs.xlsx'
+file_path = 'IV_data.xlsx'
 
 # Check if the sample file exists
 if not os.path.isfile(file_path):
