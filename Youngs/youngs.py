@@ -99,7 +99,7 @@ gradient_therm= coeffs[0]
 gradientt_error = np.sqrt(V[0][0])
 
 
-'''plt.figure(figsize= (6,8))
+plt.figure(figsize= (6,8))
 plt.minorticks_on()
 plt.grid(which='major', linestyle='-')
 plt.grid(which='minor', linestyle='--')
@@ -183,4 +183,4 @@ plt.errorbar(therm_volts, therm_avg, xerr=delta_therm, yerr=delta_V, ls='none', 
 plt.title('Voltage and Current in a Thermistor')
 plt.xlabel(r'Voltage ($V$) / V')
 plt.ylabel(r'Current ($I$) / A')
-plt.show()'''
+plt.show()
