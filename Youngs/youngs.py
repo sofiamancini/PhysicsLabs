@@ -2,10 +2,21 @@
 import numpy as np
 from matplotlib import pyplot as plt
 import pandas as pd
+import os
 
 
 # Import data
-data = pd.read_excel(r'/Users/sofiamancini/Desktop/youngs.xlsx', 0, skiprows=1, names=['Volts', '1', '2', '3', '4'])
+# Default file path for the sample file included in the repository
+file_path = 'youngs.xlsx'
+
+# Check if the sample file exists
+if not os.path.isfile(file_path):
+    print(f"Error: The file {file_path} is missing.")
+    exit(1)
+
+# Import the Excel file
+data = pd.read_excel(file_path, 0, skiprows=1, names=['Volts', '1', '2', '3', '4'])
+
 delta_V = 0.06
 bulb_volts = np.asarray(data['Volts'].iloc[0:11], dtype=float)
 b_avg = np.asarray(data['1'].iloc[0:11] + data['2'].iloc[0:11] + data['3'].iloc[0:11] + data['4'].iloc[0:11], dtype=float)
